@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:custom="clr-namespace:XcelerTask.CustomControl.RadioButtonCustom"
+             x:Class="XcelerTask.Views.AddNewUser"
+             Title="Add User">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" BackgroundColor="Gray">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <!--<RowDefinition Height="50"/>
+                    <RowDefinition Height="2"/>-->
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <!--<Label Grid.Row="0" BackgroundColor="Blue" TextColor="White" FontSize="Large" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="User Details"/>-->
+
+                <!--Grid.Row="2"-->
+                <StackLayout  Orientation="Vertical" BackgroundColor="White">
+                    <ScrollView  Orientation="Vertical">
+                    <Grid>
+                        
+                     <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                        
+                            <Label Grid.Row="0"  Text="Name :"/>
+                            <Entry Grid.Row="1" x:Name="txtname" Text=""></Entry>
+                            
+                             <Label Grid.Row="2" Text="Date Of Birth:"  FontSize="12" TextColor="Black"></Label>
+                             <DatePicker Grid.Row="3" VerticalOptions="CenterAndExpand" BackgroundColor="White"  Date="{x:Static sys:DateTime.Now}" x:Name="TbDob">
+                            <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
+                            <!--<DatePicker.TextColor>Black</DatePicker.TextColor>-->
+                            <DatePicker.MinimumDate>
+                                <sys:DateTime x:FactoryMethod="Parse">
+                                    <x:Arguments>
+                                        <x:String>Jan 1 1900</x:String>
+                                    </x:Arguments>
+                                </sys:DateTime>
+                            </DatePicker.MinimumDate>
+                            <DatePicker.MaximumDate>
+                                <sys:DateTime x:FactoryMethod="Parse">
+                                    <x:Arguments>
+                                        <x:String>Dec 31 3000</x:String>
+                                    </x:Arguments>
+                                </sys:DateTime>
+                            </DatePicker.MaximumDate>
+                        </DatePicker>
+                            
+                            <Label Grid.Row="4" Text="Gender:"  FontSize="15"  TextColor="Black" Margin="20,15,0,0"></Label>
+                            <custom:BindableRadioGroup Grid.Row="5" x:Name="MyRadiouGroup" Margin="10,10,0,5" TextColor="Black"
+                               ItemsSource="{Binding Path=MyList.Values}"
+                               SelectedIndex="{Binding SelectedIndex}"
+                               HorizontalOptions="FillAndExpand"/>
+
+                    <Label Grid.Row="6" Text="Email:"/>
+                    <Entry Grid.Row="7" x:Name="txtemail" Text=""></Entry>
+
+                    <Label Grid.Row="8" Text="Phone:"/>
+                    <Entry Grid.Row="9" x:Name="txtphone" Text=""></Entry>
+
+                    <Label Grid.Row="10" Text="Martial Status:"/>
+                    <Picker Grid.Row="11" x:Name="MaritialStatusList" />
+
+                    <Label Grid.Row="12" Text="Nationality:"/>
+                    <Picker Grid.Row="13" x:Name="NationalityList"/>
+                            <Label Grid.Row="14"  Text=""/>
+                            <Label Grid.Row="15"  Text=""/>
+                        </Grid>
+                    </ScrollView>
+                    </StackLayout>
+                
+            </Grid>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

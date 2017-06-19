@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XcelerTask.Views.UsersListView"
+             xmlns:fab="clr-namespace:FloatingButtonLib;assembly=FloatingButtonLib"
+             xmlns:control="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             Padding="15"
+	         BackgroundColor="White">
+    <ContentPage.Content>
+        <RelativeLayout>
+            <StackLayout RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+				RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}">
+            <ListView x:Name="UserProfileListview" RowHeight="110">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame Margin="10,15,10,15" Padding="0,5" >
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <control:CircleImage Grid.Column="0" Grid.Row="0" x:Name="profileImage"  Source="{Binding image}" Aspect="AspectFit" VerticalOptions="Center" BorderColor="#fff" BorderThickness="2" />
+                                    <BoxView Grid.Column="1" Grid.Row="0" WidthRequest="1"  Color="#808080" VerticalOptions="Center" HorizontalOptions="Start"/>
+                                    <Grid VerticalOptions="Center" Grid.Column="2" Grid.Row="0" >
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="1"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                            <Label Grid.Row="0" Text="{Binding Name}" Font="20" FontSize="Medium"/>
+                                            <BoxView Grid.Row="1"  Color="Black" ></BoxView>
+                                            <Label Grid.Row="2"  Text="{Binding Email}" Font="20"></Label>
+                                    </Grid>
+                                </Grid>
+
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        <fab:FloatingActionButton
+				x:Name="fabBtn"
+				Source="plus.png"
+				Size="Normal"
+                HeightRequest="60"
+                WidthRequest="60"
+                HorizontalOptions="End"    
+				Clicked="Handle_FabClicked"
+				RippleColor="Gray"       
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=-60}"
+				RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-60}" />
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

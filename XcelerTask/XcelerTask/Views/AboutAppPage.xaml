@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XcelerTask.Views.AboutAppPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Xceler Task" />
+             
+            <Editor Text="1.Reading json Data from the Assets folder 
+2.Editing the user and storing it locally
+3.used Master Detail Page concept.
+4.Used Custom Renderer's in Android 
+5.Used Dependency services to implement platform specific method's
+6.by default profile image is added for new user"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

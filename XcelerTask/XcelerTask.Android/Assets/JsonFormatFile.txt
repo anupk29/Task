@@ -1,0 +1,69 @@
+﻿{
+    userprofilelist:[
+        {
+            "Id":1,
+            "Name":"Abc",
+            "image":"people_1.jpg",
+            "NationalityId":1,
+            "MartialStatusId":1,
+            "DOB":"6/16/2017 12:00:00 AM",
+            "Gender":false,
+            "Email":"Abc@gmail.com",
+            "phone":"9876543210",
+            "IsActive":true
+            
+        },
+        {
+           "Id":2,
+            "Name":"Def",
+            "image":"people_2.jpg",
+            "NationalityId":1,
+            "MartialStatusId":1,
+            "DOB":"6/16/2017 12:00:00 AM",
+            "Gender":false,
+            "Email":"Def@gmail.com",
+            "phone":"9876543210",
+            "IsActive":true
+            
+        },
+		{
+            "Id":3,
+            "Name":"Ghi",
+            "image":"people_3.jpg",
+            "NationalityId":1,
+            "MartialStatusId":1,
+            "DOB":"6/16/2017 12:00:00 AM",
+            "Gender":false,
+            "Email":"Ghi@gmail.com",
+            "phone":"9876543210",
+            "IsActive":true
+            
+        },
+        {
+           "Id":4,
+            "Name":"Jkl",
+            "image":"people_4.jpg",
+            "NationalityId":1,
+            "MartialStatusId":1,
+            "DOB":"6/16/2017 12:00:00 AM",
+            "Gender":false,
+            "Email":"Jkl@gmail.com",
+            "phone":"9876543210",
+            "IsActive":true
+            
+        },
+		{
+           "Id":5,
+            "Name":"Mno",
+            "image":"people_5.jpg",
+            "NationalityId":1,
+            "MartialStatusId":1,
+            "DOB":"6/16/2017 12:00:00 AM",
+            "Gender":false,
+            "Email":"Mno@gmail.com",
+            "phone":"9876543210",
+            "IsActive":true
+            
+        }
+        ]
+}
